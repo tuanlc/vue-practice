@@ -19,6 +19,15 @@
         <p v-else-if="inventory <= 10 && inventory > 0">Almost Out Stock</p>
         <p v-if="inventory === 0">Out Stock</p>
         <p v-if="isSale">On Sale</p>
+
+        <ul>
+          <li v-for="detail in details">{{ detail }}</li>
+        </ul>
+
+        <div v-for="varian in varians" :key="varian.id">
+          <p>{{ varian.color }}</p>
+        </div>
+
         <a v-bind:href="link">More boots here!</a>
       </div>
     </div>
