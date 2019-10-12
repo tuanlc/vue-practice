@@ -13,6 +13,7 @@ var app = new Vue({
     }, {
       id: 234,
       color: 'blue'
-    }]
+    }],
+    cart: 0
   }
 });

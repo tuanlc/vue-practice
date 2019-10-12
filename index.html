@@ -28,6 +28,12 @@
           <p>{{ varian.color }}</p>
         </div>
 
+        <button v-on:click="cart++">Add to Cart</button>
+
+        <div class="cart">
+          <p>Cart({{ cart }})</p>
+        </div>
+
         <a v-bind:href="link">More boots here!</a>
       </div>
     </div>
