@@ -24,8 +24,11 @@
           <li v-for="detail in details">{{ detail }}</li>
         </ul>
 
-        <div v-for="varian in varians" :key="varian.id">
-          <p @mouseover="changeColor(varian.image)">{{ varian.color }}</p>
+        <div v-for="varian in varians"
+          :key="varian.id"
+          class="color-box"
+          :style="{backgroundColor: varian.color }"
+          @mouseover="changeColor(varian.image)" >
         </div>
 
         <button v-on:click="onAddToCartClick()">Add to Cart</button>
