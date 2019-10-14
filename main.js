@@ -1,6 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
+    branch: 'Vue Mastery',
     product: 'Boots',
     image: './assets/vmSocks-green.jpg',
     link: 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks',
@@ -25,6 +26,11 @@ var app = new Vue({
     },
     changeColor: function(image) {
       this.image = image;
+    }
+  },
+  computed: {
+    title() {
+      return this.branch + ' ' + this.product;
     }
   }
 });
