@@ -34,6 +34,7 @@ Vue.component('Product', {
 
                 <a v-bind:href="link">More boots here!</a>
               </div>
+              <product-review></product-review>
             </div>`,
   data() {
     return {
@@ -81,6 +82,19 @@ Vue.component('Product', {
     }
   }
 });
+
+Vue.component('product-review', {
+  template: `
+    <input v-model="name" />
+  `,
+  data() {
+    return {
+      name: null,
+      review: null,
+      rating: null
+    }
+  }
+})
 
 var app = new Vue({
   el: '#app',
